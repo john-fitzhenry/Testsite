@@ -1,0 +1,6 @@
+node_modules/
+media/stills/
+__pycache__/
+*.pyc
+.DS_Store
+media/soundtrack.wav

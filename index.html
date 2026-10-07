@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motion Reel ’26</title>
+<meta name="description" content="A 15-second, 128 BPM motion-graphics showreel — drawn in code, rendered with real motion blur, scored with a synthesized soundtrack.">
+<style>
+  @font-face { font-family: 'Archivo'; src: url('reel/fonts/archivo-variable.woff2') format('woff2'); font-weight: 100 900; font-stretch: 62% 125%; font-display: swap; }
+  @font-face { font-family: 'JetBrains Mono'; src: url('reel/fonts/jetbrains-mono-500.woff2') format('woff2'); font-weight: 500; font-display: swap; }
+  @font-face { font-family: 'JetBrains Mono'; src: url('reel/fonts/jetbrains-mono-800.woff2') format('woff2'); font-weight: 800; font-display: swap; }
+  :root { --ink: #0B0B0D; --paper: #F3EFE6; --orange: #FF4F1A; --cobalt: #2A44FF; --lime: #D4FF3A; --line: rgba(243, 239, 230, .14); }
+  * { box-sizing: border-box; }
+  html { background: var(--ink); }
+  body { margin: 0; color: var(--paper); background: var(--ink); font: 500 14px/1.6 'JetBrains Mono', ui-monospace, monospace; letter-spacing: .02em; }
+  .wrap { max-width: 1240px; margin: 0 auto; padding: 0 16px; }
+  header { display: flex; justify-content: space-between; align-items: baseline; padding: 28px 0 18px; text-transform: uppercase; letter-spacing: .14em; font-size: 12px; }
+  header b { font-weight: 800; }
+  header a { color: inherit; opacity: .7; text-decoration: none; }
+  header a:hover { opacity: 1; color: var(--orange); }
+  h1 { font: 900 clamp(56px, 12vw, 168px)/.86 'Archivo', system-ui, sans-serif; letter-spacing: -.03em; margin: 28px 0 12px; }
+  h1 i { font-style: normal; color: var(--orange); }
+  .lede { max-width: 640px; opacity: .78; margin: 0 0 32px; }
+  .player { position: relative; border-radius: 10px; overflow: hidden; background: #000; aspect-ratio: 16 / 9; box-shadow: 0 0 0 1px var(--line); }
+  .player video { display: block; width: 100%; height: 100%; }
+  .meta { display: flex; flex-wrap: wrap; gap: 8px 28px; padding: 14px 0 0; font-size: 12px; text-transform: uppercase; letter-spacing: .12em; opacity: .65; }
+  .cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 26px 0 0; }
+  .btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 18px; border-radius: 999px; font: 800 12px/1 'JetBrains Mono', monospace; letter-spacing: .14em; text-transform: uppercase; text-decoration: none; color: var(--ink); background: var(--paper); }
+  .btn.alt { background: transparent; color: var(--paper); box-shadow: inset 0 0 0 1px var(--line); }
+  .btn:hover { background: var(--orange); color: var(--ink); }
+  h2 { font: 800 12px/1 'JetBrains Mono', monospace; letter-spacing: .2em; text-transform: uppercase; opacity: .6; margin: 72px 0 18px; }
+  .scenes { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; }
+  .scenes li { background: var(--ink); padding: 20px; cursor: pointer; transition: background .2s; }
+  .scenes li:hover { background: #151518; }
+  .scenes .n { display: flex; justify-content: space-between; font-size: 11px; letter-spacing: .14em; opacity: .55; }
+  .scenes h3 { font: 900 30px/1.1 'Archivo', system-ui, sans-serif; letter-spacing: -.01em; margin: 10px 0 6px; }
+  .scenes li:nth-child(4n+1) h3 { color: var(--orange); }
+  .scenes li:nth-child(4n+2) h3 { color: var(--paper); }
+  .scenes li:nth-child(4n+3) h3 { color: var(--lime); }
+  .scenes li:nth-child(4n+4) h3 { color: #8E9CFF; }
+  .scenes p { margin: 0; opacity: .72; font-size: 13px; }
+  .how { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 28px; }
+  .how p { margin: 6px 0 0; opacity: .72; font-size: 13px; }
+  .how b { font-weight: 800; letter-spacing: .1em; text-transform: uppercase; font-size: 12px; }
+  code { color: var(--lime); }
+  footer { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px; padding: 64px 0 36px; font-size: 11px; letter-spacing: .14em; text-transform: uppercase; opacity: .45; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><span><b>Claude</b> — Motion Reel ’26</span><a href="reel/">Live version →</a></header>
+
+  <h1>Things that<br>move<i>.</i></h1>
+  <p class="lede">Fifteen seconds, eight bars, one continuous idea: every scene ends as the next one begins. Drawn entirely in code, rendered at 1080p60 with true sub-frame motion blur, scored with a soundtrack synthesized from scratch and locked to the beat.</p>
+
+  <div class="player">
+    <video id="v" src="media/showreel.mp4" poster="media/poster.jpg" controls playsinline preload="metadata"></video>
+  </div>
+  <div class="meta"><span>00:15</span><span>1920×1080 · 60 fps</span><span>128 BPM</span><span>8-sample motion blur</span><span>No stock, no samples</span></div>
+  <div class="cta">
+    <a class="btn" href="media/showreel.mp4" download>Download MP4</a>
+    <a class="btn alt" href="reel/">Watch it render live</a>
+  </div>
+
+  <h2>Breakdown — click to jump</h2>
+  <ol class="scenes">
+    <li data-t="0"><div class="n"><span>01</span><span>00:00.00</span></div><h3>Physics</h3><p>A ball with real gravity and a restitution of 0.5, so every bounce halves onto the beat grid. Squash, stretch, anticipation — then it launches itself into the letter I.</p></li>
+    <li data-t="1.875"><div class="n"><span>02</span><span>00:01.88</span></div><h3>Type</h3><p>I · MAKE · THINGS · MOVE. Mask reveals, a live variable-font weight sweep, sprung scatter-assembly with an extrude, bouncing letters — and a zoom through the O.</p></li>
+    <li data-t="3.75"><div class="n"><span>03</span><span>00:03.75</span></div><h3>Morph</h3><p>One 360-point path sprung between circle, square, triangle and star. Overshoot makes the shapes bulge; time-echo trails and orbiting satellites add depth.</p></li>
+    <li data-t="5.625"><div class="n"><span>04</span><span>00:05.63</span></div><h3>Systems</h3><p>153 Truchet tiles: spawn ripple, trim-path draw-on, rotation waves, a diagonal card-flip wave, then a collapse to dots.</p></li>
+    <li data-t="7.5"><div class="n"><span>05</span><span>00:07.50</span></div><h3>3D</h3><p>The dots were a plane all along. It tilts into a rippling floor, wraps into a sphere, knots into a torus and turns to face the camera.</p></li>
+    <li data-t="9.375"><div class="n"><span>06</span><span>00:09.38</span></div><h3>Line</h3><p>The torus rings become seven stroked paths: spinning arcs, a 3:2 Lissajous knot, a travelling waveform, and finally stripes.</p></li>
+    <li data-t="11.25"><div class="n"><span>07</span><span>00:11.25</span></div><h3>Rhythm</h3><p>Seven half-beat cuts, each through a different transition mask, then a wall of every scene so far that implodes into a single dot.</p></li>
+    <li data-t="13.125"><div class="n"><span>08</span><span>00:13.13</span></div><h3>Hello</h3><p>Impact. The letters burst out of the dot; the dot arcs over and lands as the full stop. The ball from second one was the period all along.</p></li>
+  </ol>
+
+  <h2>How it’s made</h2>
+  <div class="how">
+    <div><b>Engine</b><p><code>reel/showreel.js</code> draws every frame as a pure function of time on a single Canvas 2D context — no libraries, no assets beyond two open-source fonts.</p></div>
+    <div><b>Render</b><p><code>tools/render.js</code> drives headless Chromium and averages 8 sub-frames per output frame across a 180° shutter, so the motion blur comes from real movement. ffmpeg adds film grain and encodes the result.</p></div>
+    <div><b>Score</b><p><code>tools/soundtrack.py</code> synthesizes kick, bass, supersaw pads, FM plucks, risers and every UI tick with numpy, placed on the same beat timeline as the picture.</p></div>
+  </div>
+
+  <footer><span>Motion Reel ’26</span><span>Archivo &amp; JetBrains Mono — SIL OFL 1.1</span></footer>
+</div>
+<script>
+  const v = document.getElementById('v');
+  document.querySelectorAll('.scenes li').forEach(li => li.addEventListener('click', () => {
+    v.currentTime = +li.dataset.t; v.play(); v.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }));
+</script>
+</body>
+</html>

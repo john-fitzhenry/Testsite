@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Motion Reel ’26 — Live</title>
+<style>
+  @font-face { font-family: 'Archivo'; src: url('fonts/archivo-variable.woff2') format('woff2'); font-weight: 100 900; font-stretch: 62% 125%; font-display: block; }
+  @font-face { font-family: 'JetBrains Mono'; src: url('fonts/jetbrains-mono-500.woff2') format('woff2'); font-weight: 500; font-display: block; }
+  @font-face { font-family: 'JetBrains Mono'; src: url('fonts/jetbrains-mono-800.woff2') format('woff2'); font-weight: 800; font-display: block; }
+  :root { --ink: #0B0B0D; --paper: #F3EFE6; }
+  html, body { margin: 0; height: 100%; background: var(--ink); color: var(--paper); }
+  body { display: grid; place-items: center; overflow: hidden; font: 500 13px/1.4 'JetBrains Mono', monospace; }
+  canvas { display: block; width: min(100vw, 177.78vh); aspect-ratio: 16 / 9; height: auto; cursor: pointer; }
+  body.render canvas { width: 1920px; cursor: default; }
+  #hint { position: fixed; left: 50%; bottom: 16px; transform: translateX(-50%); opacity: .55; letter-spacing: .08em; pointer-events: none; transition: opacity .4s; }
+  body.render #hint, body.playing #hint { opacity: 0; }
+</style>
+</head>
+<body>
+<canvas id="reel" width="1920" height="1080"></canvas>
+<div id="hint">CLICK TO PLAY · SPACE PAUSE · ← → SCRUB</div>
+<script src="showreel.js"></script>
+</body>
+</html>
