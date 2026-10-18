@@ -55,3 +55,22 @@ node tools/render.js stills --beats 9.5,18.4   # spot-check single frames
 
 Fonts: [Archivo](https://github.com/Omnibus-Type/Archivo) and
 [JetBrains Mono](https://github.com/JetBrains/JetBrainsMono), both SIL OFL 1.1 (licences in `reel/fonts/`).
+
+## Jaret's First Day at UConn
+
+**▶ [`first-day/index.html`](first-day/index.html)**: a browser game that simulates
+Jaret's first day at UConn's Storrs campus. It's one self-contained HTML file with
+no build step. Open it in a browser and play with the mouse, keyboard or touch.
+
+- **The day.** Walk the campus map from 8:00 AM to sunset. The clock only moves
+  when Jaret does. Get the Husky One Card at the Student Union, make Intro to
+  Psych (Laurel Hall, 10:00) and Calculus I (Oak Hall, 2:00), eat at McMahon,
+  and reach Horsebarn Hill for the sunset.
+- **Mini-games.** ID photo timing, Note Catch, the Calc warm-up blitz, Build Your
+  Tray, free throws in Gampel Pavilion and Scoop Stack at the Dairy Bar. There's
+  also the Involvement Fair, Babbidge Library, Spirit Rock and Jonathan the Husky.
+- **Stakes.** Energy, Social, Brains and Spirit meters, six friends to make, 14
+  badges, and Mirror Lake geese that chase you. The day ends with a report card,
+  and progress saves in the browser.
+
+A fan-made game, not affiliated with the University of Connecticut.
