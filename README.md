@@ -8,6 +8,29 @@ soundtrack synthesized from scratch.
 
 ![poster](media/poster.jpg)
 
+## Jaret's First Day: walkable campus version (`uconn/`)
+
+**▶ [`uconn/`](uconn/index.html)** is a browser game simulating Jaret's first day as a UConn freshman
+in Storrs. Jaret has short blonde hair, green eyes and a navy HUSKIES shirt. Walk the
+campus from South Campus to Horsebarn Hill, make it to Intro to Psychology and Calculus I, and
+play eight mini-games: Tray Dash, Pop Quiz, Math Sprint, Swag Grab, Free Throws, Scoop Stack,
+Memory Match and a selfie with Jonathan the Husky. The day ends with a graded report card.
+
+```
+uconn/index.html       page, HUD and styles
+uconn/js/engine.js     helpers, synthesized audio, input routing, dialogue and cards
+uconn/js/art.js        all character, animal and item art (canvas vectors)
+uconn/js/world.js      campus map, collision and A* pathfinding
+uconn/js/worldDraw.js  campus rendering, day/night lighting, minimap
+uconn/js/minis*.js     the eight mini-games
+uconn/js/story.js      schedule, stats, clock and HUD
+uconn/js/scenes.js     places, people and cutscenes
+uconn/js/main.js       title screen, main loop and boot
+```
+
+Open `uconn/index.html` in a browser. It needs no build step. Controls: tap or click to walk (or WASD / arrows),
+tap a building or person (or press E) to go in or talk, and press M for the map.
+
 ## The piece
 
 Eight scenes of one bar each. Every scene ends as the next one begins, with no hard resets:
